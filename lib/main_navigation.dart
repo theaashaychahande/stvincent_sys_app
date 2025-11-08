@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/home_dashboard.dart';
 import 'announcements_screen.dart';
 import 'calendar_screen.dart';
-import 'profile_screen.dart';
+import 'screens/profile_screen.dart';
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
