@@ -228,13 +228,28 @@ class _HomeDashboardState extends State<HomeDashboard> {
               child: LayoutBuilder(
                 builder: (context, constraints) {
                   return GridView.count(
-                    crossAxisCount: 3,
+                    crossAxisCount: 2,
                     crossAxisSpacing: 16,
                     mainAxisSpacing: 16,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: 1.2,
-                    children: branches.map((branch) => _buildBranchCard(branch)).toList(),
+                    childAspectRatio: 2.0,
+                    children: [
+                      _buildBranchCard({'name': 'Computer Science & Engineering', 'icon': '💻'}),
+                      _buildBranchCard({'name': 'Information Technology', 'icon': '🧠'}),
+                      _buildBranchCard({'name': 'Mechanical Engineering', 'icon': '⚙️'}),
+                      _buildBranchCard({'name': 'Civil Engineering', 'icon': '🏗️'}),
+                      _buildBranchCard({'name': 'Electronics & Telecommunication', 'icon': '📡'}),
+                      _buildBranchCard({'name': 'Electrical Engineering', 'icon': '🔌'}),
+                      _buildBranchCard({'name': 'Computer Science & Business Systems', 'icon': '🧬'}),
+                      _buildBranchCard({'name': 'Artificial Intelligence', 'icon': '🤖'}),
+                      _buildBranchCard({'name': 'Robotics & Artificial Intelligence', 'icon': '🦾'}),
+                      _buildBranchCard({'name': 'Industrial Internet of Things', 'icon': '🌐'}),
+                      _buildBranchCard({'name': 'Bachelor of Vocation', 'icon': '🛠️'}),
+                      _buildBranchCard({'name': 'Data Science', 'icon': '📊'}),
+                      _buildBranchCard({'name': 'Cyber Security', 'icon': '🔒'}),
+                      _buildBranchCard({'name': 'First Year', 'icon': '📘'}),
+                    ],
                   );
                 },
               ),
@@ -262,18 +277,17 @@ class _HomeDashboardState extends State<HomeDashboard> {
               child: LayoutBuilder(
                 builder: (context, constraints) {
                   return GridView.count(
-                    crossAxisCount: 3,
+                    crossAxisCount: 2,
                     crossAxisSpacing: 16,
                     mainAxisSpacing: 16,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: 1.2,
+                    childAspectRatio: 1.5,
                     children: [
                       _buildAchievementCard('NAAC', 'A Grade'),
                       _buildAchievementCard('NBA', 'Accredited'),
                       _buildAchievementCard('Autonomous', 'Status'),
                       _buildAchievementCard('AICTE', 'Approved'),
-                      _buildAchievementCard('RTMNU', 'Affiliated'),
                     ],
                   );
                 },
@@ -342,12 +356,12 @@ class _HomeDashboardState extends State<HomeDashboard> {
               child: LayoutBuilder(
                 builder: (context, constraints) {
                   return GridView.count(
-                    crossAxisCount: 4,
+                    crossAxisCount: 3,
                     crossAxisSpacing: 16,
                     mainAxisSpacing: 16,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: 1.2,
+                    childAspectRatio: 1.5,
                     children: quickLinks.map((link) => _buildQuickLinkCard(link)).toList(),
                   );
                 },
@@ -411,24 +425,19 @@ class _HomeDashboardState extends State<HomeDashboard> {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              branch['icon']!,
-              style: const TextStyle(fontSize: 20),
-            ),
-            const SizedBox(height: 6),
-            Text(
               branch['name']!,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 12,
+                fontSize: 14,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(height: 6),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 // Navigate to branch details
@@ -439,10 +448,10 @@ class _HomeDashboardState extends State<HomeDashboard> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                textStyle: const TextStyle(fontSize: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                textStyle: const TextStyle(fontSize: 12),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(6),
+                  borderRadius: BorderRadius.circular(8),
                 ),
               ),
               child: const Text('Explore'),
@@ -460,39 +469,39 @@ class _HomeDashboardState extends State<HomeDashboard> {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(6.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Placeholder for logo
             Container(
-              width: 40,
-              height: 40,
+              width: 25,
+              height: 25,
               decoration: BoxDecoration(
                 color: Colors.blue.withOpacity(0.1),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(6),
               ),
               child: const Icon(
                 Icons.school,
                 color: Colors.blue,
-                size: 24,
+                size: 15,
               ),
             ),
-            const SizedBox(height: 6),
+            const SizedBox(height: 3),
             Text(
               title,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 12,
+                fontSize: 10,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 2),
+            const SizedBox(height: 1),
             Text(
               subtitle,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 10,
+                fontSize: 8,
                 color: Colors.grey,
               ),
             ),
@@ -552,20 +561,20 @@ class _HomeDashboardState extends State<HomeDashboard> {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(6.0),
+        padding: const EdgeInsets.all(3.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               link['icon']!,
-              style: const TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 16),
             ),
-            const SizedBox(height: 6),
+            const SizedBox(height: 3),
             Text(
               link['name']!,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 10,
+                fontSize: 8,
                 fontWeight: FontWeight.w500,
               ),
             ),
