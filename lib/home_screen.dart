@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'sections/about_college.dart';
+import 'sections/about_page.dart';
 import 'sections/basic_info.dart';
 import 'sections/programs_offered.dart';
 import 'sections/branches_departments.dart';
@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const AboutCollegePage(),
+                    builder: (context) => const AboutPage(),
                   ),
                 );
               },
