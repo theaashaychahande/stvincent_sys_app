@@ -3,7 +3,6 @@ import 'sections/about_page.dart';
 import 'sections/basic_info_page.dart';
 import 'sections/programs_offered_page.dart';
 import 'sections/branches_page.dart';
-import 'sections/degrees.dart';
 import 'widgets/college_logo.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -87,18 +86,6 @@ class HomeScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const BranchesPage(),
-                  ),
-                );
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.workspace_premium),
-              title: const Text('Degrees'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DegreesPage(),
                   ),
                 );
               },
