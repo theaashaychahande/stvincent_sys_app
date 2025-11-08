@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'widgets/college_logo.dart';
 
 class AnnouncementsScreen extends StatelessWidget {
   const AnnouncementsScreen({super.key});
@@ -7,26 +8,13 @@ class AnnouncementsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: [
-            Image.asset(
-              'assets/logosvpcet.png',
-              height: 30,
-              width: 30,
-              errorBuilder: (context, error, stackTrace) {
-                // Placeholder if image is not found
-                return Container(
-                  width: 30,
-                  height: 30,
-                  color: Colors.grey,
-                  child: const Icon(Icons.image, size: 20),
-                );
-              },
-            ),
-            const SizedBox(width: 10),
-            const Text('Announcements'),
-          ],
-        ),
+        title: const Text('Announcements'),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 12),
+            child: CollegeLogo(size: 32),
+          ),
+        ],
       ),
       body: const Center(
         child: Text(

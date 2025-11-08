@@ -4,6 +4,7 @@ import 'sections/basic_info.dart';
 import 'sections/programs_offered.dart';
 import 'sections/branches_departments.dart';
 import 'sections/degrees.dart';
+import 'widgets/college_logo.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,26 +13,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: [
-            Image.asset(
-              'assets/logosvpcet.png',
-              height: 30,
-              width: 30,
-              errorBuilder: (context, error, stackTrace) {
-                // Placeholder if image is not found
-                return Container(
-                  width: 30,
-                  height: 30,
-                  color: Colors.grey,
-                  child: const Icon(Icons.image, size: 20),
-                );
-              },
-            ),
-            const SizedBox(width: 10),
-            const Text('Home Page'),
-          ],
-        ),
+        title: const Text('Home Page'),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 12),
+            child: CollegeLogo(size: 32),
+          ),
+        ],
       ),
       drawer: Drawer(
         child: ListView(
@@ -43,20 +31,7 @@ class HomeScreen extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Image.asset(
-                    'assets/logosvpcet.png',
-                    height: 50,
-                    width: 50,
-                    errorBuilder: (context, error, stackTrace) {
-                      // Placeholder if image is not found
-                      return Container(
-                        width: 50,
-                        height: 50,
-                        color: Colors.grey,
-                        child: const Icon(Icons.image, size: 30),
-                      );
-                    },
-                  ),
+                  CollegeLogo(size: 50),
                   const SizedBox(width: 10),
                   const Text(
                     'SVPCET',
