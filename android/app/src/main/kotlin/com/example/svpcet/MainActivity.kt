@@ -1,4 +1,4 @@
-package com.example.start_now_app
+package com.example.svpcet
 
 import io.flutter.embedding.android.FlutterActivity
 
