@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
+import 'screens/home_dashboard.dart';
 import 'announcements_screen.dart';
 import 'calendar_screen.dart';
 import 'profile_screen.dart';
@@ -15,7 +15,7 @@ class _MainNavigationState extends State<MainNavigation> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = const [
-    HomeScreen(),
+    HomeDashboard(),
     AnnouncementsScreen(),
     CalendarScreen(),
     ProfileScreen(),

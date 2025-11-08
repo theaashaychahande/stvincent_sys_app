@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  carousel_slider: ^5.1.1
 
 dev_dependencies:
   flutter_test:
@@ -20,3 +21,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/logosvpcet.png
+    - assets/home1.jpg
+    - assets/home2.jpg
+    - assets/home3.jpg
+    - assets/home4.jpg
+    - assets/home5.jpg
+    - assets/home6.jpg
+    - assets/home7.jpg
