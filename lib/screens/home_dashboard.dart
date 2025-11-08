@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../widgets/college_logo.dart';
+import '../sections/about_page.dart';
+import '../sections/basic_info_page.dart';
+import '../sections/programs_offered_page.dart';
+import '../sections/branches_page.dart';
+import '../sections/academics_page.dart';
 
 class HomeDashboard extends StatefulWidget {
   const HomeDashboard({super.key});
@@ -59,6 +64,91 @@ class _HomeDashboardState extends State<HomeDashboard> {
             child: CollegeLogo(size: 32),
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: const BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Row(
+                children: [
+                  CollegeLogo(size: 50),
+                  const SizedBox(width: 10),
+                  const Text(
+                    'SVPCET',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.info_outline),
+              title: const Text('About College'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AboutPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.school),
+              title: const Text('Basic Information'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const BasicInfoPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.menu_book),
+              title: const Text('Programs Offered'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ProgramsOfferedPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.account_tree),
+              title: const Text('Branches / Departments'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const BranchesPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.book),
+              title: const Text('Academics'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AcademicsPage(),
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -143,7 +233,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     mainAxisSpacing: 16,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: (constraints.maxWidth / 3 - 16) / 130,
+                    childAspectRatio: 1.2,
                     children: branches.map((branch) => _buildBranchCard(branch)).toList(),
                   );
                 },
@@ -177,7 +267,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     mainAxisSpacing: 16,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: (constraints.maxWidth / 3 - 16) / 140,
+                    childAspectRatio: 1.2,
                     children: [
                       _buildAchievementCard('NAAC', 'A Grade'),
                       _buildAchievementCard('NBA', 'Accredited'),
@@ -257,7 +347,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     mainAxisSpacing: 16,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: (constraints.maxWidth / 4 - 16) / 90,
+                    childAspectRatio: 1.2,
                     children: quickLinks.map((link) => _buildQuickLinkCard(link)).toList(),
                   );
                 },
