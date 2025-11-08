@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'sections/about_page.dart';
 import 'sections/basic_info_page.dart';
-import 'sections/programs_offered.dart';
+import 'sections/programs_offered_page.dart';
 import 'sections/branches_departments.dart';
 import 'sections/degrees.dart';
 import 'widgets/college_logo.dart';
