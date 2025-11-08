@@ -233,7 +233,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     mainAxisSpacing: 16,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: 2.0,
+                    childAspectRatio: 1.3,
                     children: [
                       _buildBranchCard({'name': 'Computer Science & Engineering', 'icon': '💻'}),
                       _buildBranchCard({'name': 'Information Technology', 'icon': '🧠'}),
@@ -282,7 +282,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     mainAxisSpacing: 16,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: 1.5,
+                    childAspectRatio: 1.4,
                     children: [
                       _buildAchievementCard('NAAC', 'A Grade'),
                       _buildAchievementCard('NBA', 'Accredited'),
@@ -433,7 +433,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
               branch['name']!,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 14,
+                fontSize: 12,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -449,9 +449,9 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 backgroundColor: Colors.blue,
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                textStyle: const TextStyle(fontSize: 12),
+                textStyle: const TextStyle(fontSize: 10),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(6),
                 ),
               ),
               child: const Text('Explore'),
@@ -469,14 +469,14 @@ class _HomeDashboardState extends State<HomeDashboard> {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(6.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Placeholder for logo
             Container(
-              width: 25,
-              height: 25,
+              width: 30,
+              height: 30,
               decoration: BoxDecoration(
                 color: Colors.blue.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(6),
@@ -484,24 +484,24 @@ class _HomeDashboardState extends State<HomeDashboard> {
               child: const Icon(
                 Icons.school,
                 color: Colors.blue,
-                size: 15,
+                size: 18,
               ),
             ),
-            const SizedBox(height: 3),
+            const SizedBox(height: 4),
             Text(
               title,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 10,
+                fontSize: 12,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 1),
+            const SizedBox(height: 2),
             Text(
               subtitle,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 8,
+                fontSize: 10,
                 color: Colors.grey,
               ),
             ),
