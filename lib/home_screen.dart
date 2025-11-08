@@ -3,6 +3,7 @@ import 'sections/about_page.dart';
 import 'sections/basic_info_page.dart';
 import 'sections/programs_offered_page.dart';
 import 'sections/branches_page.dart';
+import 'sections/academics_page.dart';
 import 'widgets/college_logo.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -86,6 +87,18 @@ class HomeScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const BranchesPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.book),
+              title: const Text('Academics'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AcademicsPage(),
                   ),
                 );
               },
