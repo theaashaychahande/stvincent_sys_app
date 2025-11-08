@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'sections/about_page.dart';
 import 'sections/basic_info_page.dart';
 import 'sections/programs_offered_page.dart';
-import 'sections/branches_departments.dart';
+import 'sections/branches_page.dart';
 import 'sections/degrees.dart';
 import 'widgets/college_logo.dart';
 
@@ -86,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const BranchesDepartmentsPage(),
+                    builder: (context) => const BranchesPage(),
                   ),
                 );
               },
