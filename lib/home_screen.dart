@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'sections/about_page.dart';
-import 'sections/basic_info.dart';
+import 'sections/basic_info_page.dart';
 import 'sections/programs_offered.dart';
 import 'sections/branches_departments.dart';
 import 'sections/degrees.dart';
