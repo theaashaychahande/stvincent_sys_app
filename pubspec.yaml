@@ -1,5 +1,5 @@
-name: start_now_app
-description: A simple Flutter app with a yellow Start Now button.
+name: svpcet
+description: A simple Flutter app for SVPCET with a yellow Start Now button.
 publish_to: 'none'
 version: 1.0.0+1
 
