@@ -12,22 +12,60 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: Row(
+          children: [
+            Image.asset(
+              'assets/logosvpcet.png',
+              height: 30,
+              width: 30,
+              errorBuilder: (context, error, stackTrace) {
+                // Placeholder if image is not found
+                return Container(
+                  width: 30,
+                  height: 30,
+                  color: Colors.grey,
+                  child: const Icon(Icons.image, size: 20),
+                );
+              },
+            ),
+            const SizedBox(width: 10),
+            const Text('Home Page'),
+          ],
+        ),
       ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
+            DrawerHeader(
+              decoration: const BoxDecoration(
                 color: Colors.blue,
               ),
-              child: Text(
-                'SVPCET',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/logosvpcet.png',
+                    height: 50,
+                    width: 50,
+                    errorBuilder: (context, error, stackTrace) {
+                      // Placeholder if image is not found
+                      return Container(
+                        width: 50,
+                        height: 50,
+                        color: Colors.grey,
+                        child: const Icon(Icons.image, size: 30),
+                      );
+                    },
+                  ),
+                  const SizedBox(width: 10),
+                  const Text(
+                    'SVPCET',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
+                ],
               ),
             ),
             ListTile(
