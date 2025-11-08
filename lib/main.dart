@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'main_navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,40 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'SVPCET',
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Welcome'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // Add your button action here
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('Button Pressed!')),
-            );
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.yellow,
-            foregroundColor: Colors.black,
-            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-            textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          child: const Text('START NOW'),
-        ),
-      ),
+      home: const MainNavigation(),
     );
   }
 }
