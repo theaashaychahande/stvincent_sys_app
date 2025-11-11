@@ -17,7 +17,7 @@ class _ProfileScreenState extends State<ProfileScreen>
   @override
   void initState() {
     super.initState();
-    
+
     // Header fade-in animation
     _headerController = AnimationController(
       duration: const Duration(milliseconds: 500),
@@ -26,7 +26,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     _headerAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(parent: _headerController, curve: Curves.easeIn),
     );
-    
+
     // Cards slide-up animation
     _cardsController = AnimationController(
       duration: const Duration(milliseconds: 500),
@@ -38,7 +38,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     ).animate(
       CurvedAnimation(parent: _cardsController, curve: Curves.easeOut),
     );
-    
+
     // Start animations
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _headerController.forward();
@@ -145,7 +145,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                         const SizedBox(height: 20),
                         // Student Name
                         const Text(
-                          'John Doe',
+                          'Aashay Chahande',
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
@@ -155,7 +155,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                         const SizedBox(height: 8),
                         // Roll No.
                         const Text(
-                          'Roll No: 123456',
+                          'Roll No: 24011012',
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.grey,
@@ -164,7 +164,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                         const SizedBox(height: 8),
                         // Branch and Year
                         const Text(
-                          'Computer Science & Engineering - 3rd Year',
+                          'Mechanical Engineering - 2nd Year',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16,
@@ -199,12 +199,12 @@ class _ProfileScreenState extends State<ProfileScreen>
                           ),
                         ),
                         const SizedBox(height: 16),
-                        _buildDetailRow('📧 Email', 'john.doe@svpcet.edu.in'),
-                        _buildDetailRow('📞 Phone', '+91 98765 43210'),
-                        _buildDetailRow('🎂 Date of Birth', '15 Jan 2002'),
-                        _buildDetailRow('🏠 Address', '123 Main Street, City'),
+                        _buildDetailRow('📧 Email', 'aashaychahande@gmail.com'),
+                        _buildDetailRow('📞 Phone', '+91 7507666700'),
+                        _buildDetailRow('🎂 Date of Birth', '21 sept 2005'),
+                        _buildDetailRow('🏠 Address', 'Nagpur, Maharashtra'),
                         _buildDetailRow('♂️ Gender', 'Male'),
-                        _buildDetailRow('📚 Blood Group', 'O+'),
+                        _buildDetailRow('📚 Blood Group', 'A+'),
                       ],
                     ),
                   ),
@@ -234,10 +234,10 @@ class _ProfileScreenState extends State<ProfileScreen>
                         ),
                         const SizedBox(height: 16),
                         _buildDetailRow('📝 Enrollment No', 'EN123456789'),
-                        _buildDetailRow('📅 Batch', '2021-2025'),
+                        _buildDetailRow('📅 Batch', '2024-2028'),
                         _buildDetailRow('📈 CGPA', '8.75'),
-                        _buildDetailRow('📋 Attendance %', '92%'),
-                        _buildDetailRow('🏛️ University', 'University of Mumbai'),
+                        _buildDetailRow('📋 Attendance %', '72%'),
+                        _buildDetailRow('🏛️ University', 'RTMNU, nagpur'),
                       ],
                     ),
                   ),
