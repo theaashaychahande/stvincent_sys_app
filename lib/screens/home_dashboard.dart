@@ -304,7 +304,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     mainAxisSpacing: 16,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: 1.3,
+                    childAspectRatio: 1.4,
                     children: [
                       _buildEnhancedAchievementCard('NAAC', 'A Grade', Colors.blue),
                       _buildEnhancedAchievementCard('NBA', 'Accredited', Colors.green),
@@ -505,39 +505,39 @@ class _HomeDashboardState extends State<HomeDashboard> {
           borderRadius: BorderRadius.circular(16),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(12.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                width: 50,
-                height: 50,
+                width: 40,
+                height: 40,
                 decoration: BoxDecoration(
                   color: color.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: Icon(
                   _getIconForAchievement(title),
                   color: color,
-                  size: 24,
+                  size: 20,
                 ),
               ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 8),
               Text(
                 title,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   fontWeight: FontWeight.bold,
                   color: color,
                 ),
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 2),
               Text(
                 subtitle,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                  fontSize: 12,
+                  fontSize: 10,
                   color: Colors.grey,
                 ),
               ),
