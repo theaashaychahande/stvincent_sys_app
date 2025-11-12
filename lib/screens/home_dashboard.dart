@@ -327,7 +327,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 child: Text(
                   'Vision & Mission',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                   ),
@@ -340,18 +340,20 @@ class _HomeDashboardState extends State<HomeDashboard> {
               child: Row(
                 children: [
                   Expanded(
-                    child: _buildVisionMissionCard(
+                    child: _buildEnhancedVisionMissionCard(
                       'Vision',
                       'To develop a knowledge-based society with clarity of thoughts and charity at hearts to serve humanity with integrity.',
-                      true,
+                      Colors.blue,
+                      Icons.lightbulb,
                     ),
                   ),
-                  const SizedBox(width: 8),
+                  const SizedBox(width: 16),
                   Expanded(
-                    child: _buildVisionMissionCard(
+                    child: _buildEnhancedVisionMissionCard(
                       'Mission',
-                      '• Empower youth to be technocrats\n• Foster discipline and knowledge\n• Uphold professional spirit',
-                      false,
+                      'To empower youth to be technocrats of tomorrow with absolute discipline, quest for knowledge and strong ethos to uphold the spirit of professionalism.',
+                      Colors.green,
+                      Icons.rocket_launch,
                     ),
                   ),
                 ],
@@ -367,7 +369,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 child: Text(
                   'Quick Links',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                   ),
@@ -385,9 +387,9 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     mainAxisSpacing: 16,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: 1.5,
+                    childAspectRatio: 1.3,
                     children: quickLinks
-                        .map((link) => _buildQuickLinkCard(link))
+                        .map((link) => _buildEnhancedQuickLinkCard(link))
                         .toList(),
                   );
                 },
@@ -567,76 +569,113 @@ class _HomeDashboardState extends State<HomeDashboard> {
     }
   }
 
-  Widget _buildVisionMissionCard(String title, String content, bool isVision) {
+  Widget _buildEnhancedVisionMissionCard(String title, String content, Color color, IconData icon) {
     return Card(
-      elevation: 4,
-      color: isVision
-          ? Colors.blue.withOpacity(0.1)
-          : Colors.green.withOpacity(0.1),
+      elevation: 6,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(16),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(
-                  isVision ? Icons.lightbulb_outline : Icons.adjust,
-                  color: isVision ? Colors.blue : Colors.green,
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [color.withOpacity(0.1), color.withOpacity(0.05)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: color.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(25),
                 ),
-                const SizedBox(width: 8),
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: isVision ? Colors.blue : Colors.green,
-                  ),
+                child: Icon(
+                  icon,
+                  color: color,
+                  size: 24,
                 ),
-              ],
-            ),
-            const SizedBox(height: 12),
-            Text(
-              content,
-              style: const TextStyle(
-                fontSize: 12,
-                color: Colors.grey,
               ),
-            ),
-          ],
+              const SizedBox(height: 16),
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: color,
+                ),
+              ),
+              const SizedBox(height: 12),
+              Text(
+                content,
+                style: const TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                  height: 1.5,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Widget _buildQuickLinkCard(Map<String, String> link) {
+  Widget _buildEnhancedQuickLinkCard(Map<String, String> link) {
     return Card(
-      elevation: 4,
+      elevation: 6,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(16),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(3.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              link['icon']!,
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 3),
-            Text(
-              link['name']!,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 8,
-                fontWeight: FontWeight.w500,
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.blue.withOpacity(0.1), Colors.blue.withOpacity(0.05)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: Colors.blue.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(
+                  child: Text(
+                    link['icon']!,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
               ),
-            ),
-          ],
+              const SizedBox(height: 8),
+              Text(
+                link['name']!,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black87,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
