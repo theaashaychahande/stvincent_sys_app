@@ -6,7 +6,6 @@
 
 [![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 ## 🌟 About the App
 
@@ -153,20 +152,6 @@ Nagpur, Maharashtra, India - 441108
 📞 **Phone:** +91 7743979315, +91 9423683433
 📧 **Email:** info@stvincentngp.edu.in
 🌐 **Website:** [www.stvincentngp.edu.in](http://www.stvincentngp.edu.in)
-
-## 🤝 Contributing
-
-We welcome contributions to enhance the SVPCET mobile application. To contribute:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 <p align="center">
