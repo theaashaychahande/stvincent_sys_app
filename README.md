@@ -21,7 +21,7 @@ Whether you're a student, faculty member, or staff, this app streamlines daily t
 Established in 2004 by the Nagpur Pallottine Society, SVPCET is a premier autonomous engineering institution located in Nagpur, Maharashtra, India. With a strong commitment to academic excellence and holistic development, the college has become a beacon of quality technical education.
 
 ### 🏆 Accreditations & Recognitions
-- **NAAC Grade 'A'** with CGPA 3.19
+- **NAAC Grade 'A'** 
 - **NBA Accredited** programs in multiple branches
 - **NIRF Listed** institution
 - **AICTE Approved** and affiliated to RTM Nagpur University
@@ -168,16 +168,9 @@ We welcome contributions to enhance the SVPCET mobile application. To contribute
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- Special thanks to the Nagpur Pallottine Society for their continuous support
-- Gratitude to all faculty members and students who contributed to the development
-- Appreciation to the Flutter community for the amazing framework
-
----
 
 <p align="center">
-  <strong>Made with ❤️ at St. Vincent Pallotti College of Engineering & Technology</strong>
+  <strong>Made by The Aashay chahande </strong>
 </p>
 
 <p align="center">
