@@ -286,7 +286,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                 child: Text(
                   'Accreditations & Achievements',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                   ),
@@ -304,12 +304,14 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     mainAxisSpacing: 16,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    childAspectRatio: 1.4,
+                    childAspectRatio: 1.3,
                     children: [
-                      _buildAchievementCard('NAAC', 'A Grade'),
-                      _buildAchievementCard('NBA', 'Accredited'),
-                      _buildAchievementCard('Autonomous', 'Status'),
-                      _buildAchievementCard('AICTE', 'Approved'),
+                      _buildEnhancedAchievementCard('NAAC', 'A Grade', Colors.blue),
+                      _buildEnhancedAchievementCard('NBA', 'Accredited', Colors.green),
+                      _buildEnhancedAchievementCard('Autonomous', 'Status', Colors.purple),
+                      _buildEnhancedAchievementCard('AICTE', 'Approved', Colors.orange),
+                      _buildEnhancedAchievementCard('NIRF', 'Listed', Colors.red),
+                      _buildEnhancedAchievementCard('UGC', 'Recognized', Colors.teal),
                     ],
                   );
                 },
@@ -487,53 +489,82 @@ class _HomeDashboardState extends State<HomeDashboard> {
     );
   }
 
-  Widget _buildAchievementCard(String title, String subtitle) {
+  Widget _buildEnhancedAchievementCard(String title, String subtitle, Color color) {
     return Card(
-      elevation: 4,
+      elevation: 6,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(16),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Placeholder for logo
-            Container(
-              width: 30,
-              height: 30,
-              decoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.1),
-                borderRadius: BorderRadius.circular(6),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [color.withOpacity(0.1), color.withOpacity(0.05)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: color.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: Icon(
+                  _getIconForAchievement(title),
+                  color: color,
+                  size: 24,
+                ),
               ),
-              child: const Icon(
-                Icons.school,
-                color: Colors.blue,
-                size: 18,
+              const SizedBox(height: 12),
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: color,
+                ),
               ),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              title,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
+              const SizedBox(height: 4),
+              Text(
+                subtitle,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 12,
+                  color: Colors.grey,
+                ),
               ),
-            ),
-            const SizedBox(height: 2),
-            Text(
-              subtitle,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 10,
-                color: Colors.grey,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
+  }
+
+  IconData _getIconForAchievement(String title) {
+    switch (title) {
+      case 'NAAC':
+        return Icons.verified;
+      case 'NBA':
+        return Icons.check_circle;
+      case 'Autonomous':
+        return Icons.star;
+      case 'AICTE':
+        return Icons.school;
+      case 'NIRF':
+        return Icons.list;
+      case 'UGC':
+        return Icons.account_balance;
+      default:
+        return Icons.emoji_events;
+    }
   }
 
   Widget _buildVisionMissionCard(String title, String content, bool isVision) {
