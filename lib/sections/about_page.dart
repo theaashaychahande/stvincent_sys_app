@@ -9,15 +9,15 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('About SVPCET'),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: EdgeInsets.only(right: 12),
             child: CollegeLogo(size: 32),
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -25,8 +25,8 @@ class AboutPage extends StatelessWidget {
             Center(
               child: CollegeLogo(size: 100),
             ),
-            const SizedBox(height: 20),
-            const Center(
+            SizedBox(height: 20),
+            Center(
               child: Text(
                 'St. Vincent Pallotti College of Engineering & Technology, Nagpur',
                 textAlign: TextAlign.center,
@@ -36,8 +36,8 @@ class AboutPage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 10),
-            const Center(
+            SizedBox(height: 10),
+            Center(
               child: Text(
                 'Established: 2004 by the Nagpur Pallottine Society',
                 textAlign: TextAlign.center,
@@ -47,81 +47,81 @@ class AboutPage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 30),
-            
+            SizedBox(height: 30),
+
             // Accreditation & Affiliations
-            const SectionTitle('Accreditation & Affiliations'),
-            const SectionText(
+            SectionTitle('Accreditation & Affiliations'),
+            SectionText(
                 'NAAC accredited with \'A\' Grade and CGPA 3.19 (First Cycle). NBA accredited for various branches. Affiliated to RTM Nagpur University, approved by DTE (Mumbai) & AICTE (Govt. of India).'),
-            const SizedBox(height: 20),
-            
+            SizedBox(height: 20),
+
             // Location
-            const SectionTitle('Location'),
-            const SectionText(
+            SectionTitle('Location'),
+            SectionText(
                 'Gavsi Manapur, Wardha Road, Nagpur, Maharashtra, India (Pin: 441108)'),
-            const SizedBox(height: 30),
-            
+            SizedBox(height: 30),
+
             // Vision
-            const SectionTitle('Vision'),
-            const SectionText(
+            SectionTitle('Vision'),
+            SectionText(
                 'To develop a knowledge-based society with clarity of thoughts and charity at hearts to serve humanity with integrity.'),
-            const SizedBox(height: 20),
-            
+            SizedBox(height: 20),
+
             // Mission
-            const SectionTitle('Mission'),
-            const SectionText(
+            SectionTitle('Mission'),
+            SectionText(
                 'To empower youth to be technocrats of tomorrow with absolute discipline, quest for knowledge and strong ethos to uphold the spirit of professionalism.'),
-            const SizedBox(height: 30),
-            
+            SizedBox(height: 30),
+
             // Core Values
-            const SectionTitle('Core Values'),
-            const BulletPoint(
+            SectionTitle('Core Values'),
+            BulletPoint(
                 'Human Dignity: Guided by love, goodness, and compassion irrespective of caste, creed, gender, or color, inspired by Mother Teresa.'),
-            const BulletPoint(
+            BulletPoint(
                 'Faith Perspective: Emphasis on \'intellectual charity\' and unity of knowledge, inspired by Pope Francis.'),
-            const SizedBox(height: 30),
-            
+            SizedBox(height: 30),
+
             // Highlights & Achievements
-            const SectionTitle('Highlights & Achievements'),
-            const BulletPoint('670+ students have opted for internships.'),
-            const BulletPoint('Collaboration with 100+ companies for internships.'),
-            const BulletPoint('4000+ alumni across 5 continents and 53 nations.'),
-            const BulletPoint(
+            SectionTitle('Highlights & Achievements'),
+            BulletPoint('670+ students have opted for internships.'),
+            BulletPoint('Collaboration with 100+ companies for internships.'),
+            BulletPoint('4000+ alumni across 5 continents and 53 nations.'),
+            BulletPoint(
                 'NBA Accredited Branches: Electrical, E&TC, Mechanical, IT, and CSE.'),
-            const BulletPoint(
+            BulletPoint(
                 'Strong governing body with experts from Bosch, TCS, IIT, VNIT, and Govt. sectors.'),
-            const SizedBox(height: 30),
-            
+            SizedBox(height: 30),
+
             // Accreditations & Ranking
-            const SectionTitle('Accreditations & Ranking'),
-            const BulletPoint('NAAC Grade: \'A\' with CGPA 3.19'),
-            const BulletPoint('NBA Accreditation valid up to 2027 (stream-wise)'),
-            const BulletPoint('NIRF Listed'),
-            const BulletPoint('Includes SSR, AQARs, and IIQA documentation'),
-            const SizedBox(height: 30),
-            
+            SectionTitle('Accreditations & Ranking'),
+            BulletPoint('NAAC Grade: \'A\' with CGPA 3.19'),
+            BulletPoint('NBA Accreditation valid up to 2027 (stream-wise)'),
+            BulletPoint('NIRF Listed'),
+            BulletPoint('Includes SSR, AQARs, and IIQA documentation'),
+            SizedBox(height: 30),
+
             // Committee & Leadership
-            const SectionTitle('Committee & Leadership'),
-            const BulletPoint(
+            SectionTitle('Committee & Leadership'),
+            BulletPoint(
                 'Managed by: The Nagpur Pallottine Society (serving in 46 countries).'),
-            const BulletPoint(
+            BulletPoint(
                 'Founder: St. Vincent Pallotti, Catholic priest and educator.'),
-            const BulletPoint(
+            BulletPoint(
                 'Committees: Governing Body, College Development Committee, Core Committee with deans, HoDs, and industry experts.'),
-            const SizedBox(height: 30),
-            
+            SizedBox(height: 30),
+
             // Message
-            const SectionTitle('Message'),
-            const SectionText(
+            SectionTitle('Message'),
+            SectionText(
                 'SVPCET aims to actualize the ideals of its founder—fostering holistic, value-centric, and technologically advanced engineering education. With top accreditations, a vibrant alumni network, strong industry ties, and a vision rooted in service and integrity, it is committed to nurturing technocrats who serve both industry and society.'),
-            const SizedBox(height: 30),
-            
+            SizedBox(height: 30),
+
             // Contact Information
-            const SectionTitle('Contact Information'),
-            const BulletPoint('📧 Email: info@stvincentngp.edu.in'),
-            const BulletPoint('📞 Admission Phone: +91 7743979315'),
-            const BulletPoint('🌐 Website: www.stvincentngp.edu.in'),
-            const SizedBox(height: 30),
+            SectionTitle('Contact Information'),
+            BulletPoint('📧 Email: info@stvincentngp.edu.in'),
+            BulletPoint('📞 Admission Phone: +91 7743979315'),
+            BulletPoint('🌐 Website: www.stvincentngp.edu.in'),
+            SizedBox(height: 30),
           ],
         ),
       ),

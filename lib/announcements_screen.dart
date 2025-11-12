@@ -93,8 +93,7 @@ class _AnnouncementsScreenState extends State<AnnouncementsScreen>
   final List<Map<String, String>> announcements = [
     {
       'title': 'Recruitment Notice',
-      'details':
-          'Latest recruitment notifications for faculty/staff.',
+      'details': 'Latest recruitment notifications for faculty/staff.',
     },
     {
       'title': 'Final Degree Collection Notice',
@@ -122,9 +121,9 @@ class _AnnouncementsScreenState extends State<AnnouncementsScreen>
         title: const Text('News, Events & Announcements'),
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: EdgeInsets.only(right: 12),
             child: CollegeLogo(size: 32),
           ),
         ],
@@ -320,7 +319,8 @@ class _AnnouncementsScreenState extends State<AnnouncementsScreen>
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text('Opening details for ${announcement['title']}'),
+                      content:
+                          Text('Opening details for ${announcement['title']}'),
                     ),
                   );
                 },

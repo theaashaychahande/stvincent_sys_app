@@ -58,9 +58,9 @@ class _HomeDashboardState extends State<HomeDashboard> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('SVPCET'),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: EdgeInsets.only(right: 12),
             child: CollegeLogo(size: 32),
           ),
         ],
@@ -69,15 +69,15 @@ class _HomeDashboardState extends State<HomeDashboard> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(
+            const DrawerHeader(
+              decoration: BoxDecoration(
                 color: Colors.blue,
               ),
               child: Row(
                 children: [
                   CollegeLogo(size: 50),
-                  const SizedBox(width: 10),
-                  const Text(
+                  SizedBox(width: 10),
+                  Text(
                     'SVPCET',
                     style: TextStyle(
                       color: Colors.white,
@@ -167,7 +167,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
               }),
             ),
             const SizedBox(height: 20),
-            
+
             // College Info
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -206,7 +206,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
               ),
             ),
             const SizedBox(height: 30),
-            
+
             // Branches Grid
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -235,19 +235,41 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     physics: const NeverScrollableScrollPhysics(),
                     childAspectRatio: 1.3,
                     children: [
-                      _buildBranchCard({'name': 'Computer Science & Engineering', 'icon': '💻'}),
-                      _buildBranchCard({'name': 'Information Technology', 'icon': '🧠'}),
-                      _buildBranchCard({'name': 'Mechanical Engineering', 'icon': '⚙️'}),
-                      _buildBranchCard({'name': 'Civil Engineering', 'icon': '🏗️'}),
-                      _buildBranchCard({'name': 'Electronics & Telecommunication', 'icon': '📡'}),
-                      _buildBranchCard({'name': 'Electrical Engineering', 'icon': '🔌'}),
-                      _buildBranchCard({'name': 'Computer Science & Business Systems', 'icon': '🧬'}),
-                      _buildBranchCard({'name': 'Artificial Intelligence', 'icon': '🤖'}),
-                      _buildBranchCard({'name': 'Robotics & Artificial Intelligence', 'icon': '🦾'}),
-                      _buildBranchCard({'name': 'Industrial Internet of Things', 'icon': '🌐'}),
-                      _buildBranchCard({'name': 'Bachelor of Vocation', 'icon': '🛠️'}),
+                      _buildBranchCard({
+                        'name': 'Computer Science & Engineering',
+                        'icon': '💻'
+                      }),
+                      _buildBranchCard(
+                          {'name': 'Information Technology', 'icon': '🧠'}),
+                      _buildBranchCard(
+                          {'name': 'Mechanical Engineering', 'icon': '⚙️'}),
+                      _buildBranchCard(
+                          {'name': 'Civil Engineering', 'icon': '🏗️'}),
+                      _buildBranchCard({
+                        'name': 'Electronics & Telecommunication',
+                        'icon': '📡'
+                      }),
+                      _buildBranchCard(
+                          {'name': 'Electrical Engineering', 'icon': '🔌'}),
+                      _buildBranchCard({
+                        'name': 'Computer Science & Business Systems',
+                        'icon': '🧬'
+                      }),
+                      _buildBranchCard(
+                          {'name': 'Artificial Intelligence', 'icon': '🤖'}),
+                      _buildBranchCard({
+                        'name': 'Robotics & Artificial Intelligence',
+                        'icon': '🦾'
+                      }),
+                      _buildBranchCard({
+                        'name': 'Industrial Internet of Things',
+                        'icon': '🌐'
+                      }),
+                      _buildBranchCard(
+                          {'name': 'Bachelor of Vocation', 'icon': '🛠️'}),
                       _buildBranchCard({'name': 'Data Science', 'icon': '📊'}),
-                      _buildBranchCard({'name': 'Cyber Security', 'icon': '🔒'}),
+                      _buildBranchCard(
+                          {'name': 'Cyber Security', 'icon': '🔒'}),
                       _buildBranchCard({'name': 'First Year', 'icon': '📘'}),
                     ],
                   );
@@ -255,7 +277,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
               ),
             ),
             const SizedBox(height: 30),
-            
+
             // Achievements & Accreditations
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -294,7 +316,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
               ),
             ),
             const SizedBox(height: 30),
-            
+
             // Vision & Mission
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -334,7 +356,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
               ),
             ),
             const SizedBox(height: 30),
-            
+
             // Quick Links
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -362,7 +384,9 @@ class _HomeDashboardState extends State<HomeDashboard> {
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     childAspectRatio: 1.5,
-                    children: quickLinks.map((link) => _buildQuickLinkCard(link)).toList(),
+                    children: quickLinks
+                        .map((link) => _buildQuickLinkCard(link))
+                        .toList(),
                   );
                 },
               ),
@@ -377,7 +401,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
   Widget _buildCarouselItem(int index) {
     // Use the actual home images
     final String imagePath = 'assets/home${index + 1}.jpg';
-    
+
     return Container(
       margin: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
@@ -448,7 +472,8 @@ class _HomeDashboardState extends State<HomeDashboard> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 textStyle: const TextStyle(fontSize: 10),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6),
@@ -514,7 +539,9 @@ class _HomeDashboardState extends State<HomeDashboard> {
   Widget _buildVisionMissionCard(String title, String content, bool isVision) {
     return Card(
       elevation: 4,
-      color: isVision ? Colors.blue.withOpacity(0.1) : Colors.green.withOpacity(0.1),
+      color: isVision
+          ? Colors.blue.withOpacity(0.1)
+          : Colors.green.withOpacity(0.1),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),

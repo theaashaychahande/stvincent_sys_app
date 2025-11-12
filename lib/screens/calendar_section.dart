@@ -73,12 +73,14 @@ class _CalendarSectionState extends State<CalendarSection>
                   child: ElevatedButton(
                     onPressed: () => _toggleSemester(true),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          _isOddSemester ? const Color(0xFF004aad) : Colors.white,
-                      foregroundColor:
-                          _isOddSemester ? Colors.white : const Color(0xFF004aad),
-                      side: BorderSide(
-                        color: const Color(0xFF004aad),
+                      backgroundColor: _isOddSemester
+                          ? const Color(0xFF004aad)
+                          : Colors.white,
+                      foregroundColor: _isOddSemester
+                          ? Colors.white
+                          : const Color(0xFF004aad),
+                      side: const BorderSide(
+                        color: Color(0xFF004aad),
                         width: 2.0,
                       ),
                       shape: RoundedRectangleBorder(
@@ -97,12 +99,14 @@ class _CalendarSectionState extends State<CalendarSection>
                   child: ElevatedButton(
                     onPressed: () => _toggleSemester(false),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          !_isOddSemester ? const Color(0xFFF4B400) : Colors.white,
-                      foregroundColor:
-                          !_isOddSemester ? Colors.white : const Color(0xFFF4B400),
-                      side: BorderSide(
-                        color: const Color(0xFFF4B400),
+                      backgroundColor: !_isOddSemester
+                          ? const Color(0xFFF4B400)
+                          : Colors.white,
+                      foregroundColor: !_isOddSemester
+                          ? Colors.white
+                          : const Color(0xFFF4B400),
+                      side: const BorderSide(
+                        color: Color(0xFFF4B400),
                         width: 2.0,
                       ),
                       shape: RoundedRectangleBorder(

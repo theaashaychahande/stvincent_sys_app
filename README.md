@@ -6,6 +6,7 @@
 
 [![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 ## 🌟 About the App
 
@@ -20,7 +21,7 @@ Whether you're a student, faculty member, or staff, this app streamlines daily t
 Established in 2004 by the Nagpur Pallottine Society, SVPCET is a premier autonomous engineering institution located in Nagpur, Maharashtra, India. With a strong commitment to academic excellence and holistic development, the college has become a beacon of quality technical education.
 
 ### 🏆 Accreditations & Recognitions
-- **NAAC Grade 'A'** 
+- **NAAC Grade 'A'** with CGPA 3.19
 - **NBA Accredited** programs in multiple branches
 - **NIRF Listed** institution
 - **AICTE Approved** and affiliated to RTM Nagpur University
@@ -84,7 +85,7 @@ Personalized user experience (Coming Soon)
 
 *Home Dashboard* | *News & Events* | *Academic Calendar*
 :-------------------------:|:-------------------------:|:-------------------------:
-![Home](assets/home1.jpg) | ![News](assets/home2.jpg) | ![Calendar](assets/images/calenderodd.jpg)
+![Home](assets/ss1.jpg) | ![News](assets/ss2.jpg) | ![Calendar](assets/ss3.jpg)
 
 ## 🛠️ Technical Stack
 
@@ -153,9 +154,30 @@ Nagpur, Maharashtra, India - 441108
 📧 **Email:** info@stvincentngp.edu.in
 🌐 **Website:** [www.stvincentngp.edu.in](http://www.stvincentngp.edu.in)
 
+## 🤝 Contributing
+
+We welcome contributions to enhance the SVPCET mobile application. To contribute:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Special thanks to the Nagpur Pallottine Society for their continuous support
+- Gratitude to all faculty members and students who contributed to the development
+- Appreciation to the Flutter community for the amazing framework
+
+---
 
 <p align="center">
-  <strong>Made by The Aashay chahande </strong>
+  <strong>Project by The Aashay chahande</strong>
 </p>
 
 <p align="center">

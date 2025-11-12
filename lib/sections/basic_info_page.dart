@@ -9,20 +9,20 @@ class BasicInfoPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Basic Information'),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: EdgeInsets.only(right: 12),
             child: CollegeLogo(size: 32),
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Institutional Details
-            const SectionCard(
+            SectionCard(
               icon: '🏫',
               title: 'Institutional Details',
               content: [
@@ -37,10 +37,10 @@ class BasicInfoPage extends StatelessWidget {
                 'Campus Area: Approximately 10 acres',
               ],
             ),
-            const SizedBox(height: 20),
-            
+            SizedBox(height: 20),
+
             // Academic Overview
-            const SectionCard(
+            SectionCard(
               icon: '🎓',
               title: 'Academic Overview',
               content: [
@@ -51,10 +51,10 @@ class BasicInfoPage extends StatelessWidget {
                 'Recognition: NAAC and NBA accreditations',
               ],
             ),
-            const SizedBox(height: 20),
-            
+            SizedBox(height: 20),
+
             // Management & Leadership
-            const SectionCard(
+            SectionCard(
               icon: '🧭',
               title: 'Management & Leadership',
               content: [
@@ -89,10 +89,10 @@ class BasicInfoPage extends StatelessWidget {
                 '  - Robotics & AI: Dr. Amit R. Bhende',
               ],
             ),
-            const SizedBox(height: 20),
-            
+            SizedBox(height: 20),
+
             // Location & Access
-            const SectionCard(
+            SectionCard(
               icon: '🗺️',
               title: 'Location & Access',
               content: [
@@ -102,10 +102,10 @@ class BasicInfoPage extends StatelessWidget {
                 'Nearest Airport: Dr. Babasaheb Ambedkar International Airport (~6.5 km)',
               ],
             ),
-            const SizedBox(height: 20),
-            
+            SizedBox(height: 20),
+
             // Contact Information
-            const SectionCard(
+            SectionCard(
               icon: '📞',
               title: 'Contact Information',
               content: [
@@ -115,7 +115,7 @@ class BasicInfoPage extends StatelessWidget {
                 'Website: www.stvincentngp.edu.in',
               ],
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
           ],
         ),
       ),
@@ -128,7 +128,11 @@ class SectionCard extends StatelessWidget {
   final String title;
   final List<String> content;
 
-  const SectionCard({super.key, required this.icon, required this.title, required this.content});
+  const SectionCard(
+      {super.key,
+      required this.icon,
+      required this.title,
+      required this.content});
 
   @override
   Widget build(BuildContext context) {

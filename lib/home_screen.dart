@@ -14,9 +14,9 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Page'),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: EdgeInsets.only(right: 12),
             child: CollegeLogo(size: 32),
           ),
         ],
@@ -25,15 +25,15 @@ class HomeScreen extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(
+            const DrawerHeader(
+              decoration: BoxDecoration(
                 color: Colors.blue,
               ),
               child: Row(
                 children: [
                   CollegeLogo(size: 50),
-                  const SizedBox(width: 10),
-                  const Text(
+                  SizedBox(width: 10),
+                  Text(
                     'SVPCET',
                     style: TextStyle(
                       color: Colors.white,

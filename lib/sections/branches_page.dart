@@ -9,126 +9,141 @@ class BranchesPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Branches'),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: EdgeInsets.only(right: 12),
             child: CollegeLogo(size: 32),
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(16.0),
         child: Column(
           children: [
-            const BranchCard(
+            BranchCard(
               icon: '💻',
               branchName: 'Computer Science & Engineering (CSE)',
               hod: 'Dr. Manoj V. Bramhe',
-              focus: 'Core computer systems, software development, and algorithms.',
-              highlight: 'NBA Accredited; offers electives in AI, ML, and Cloud Computing.',
+              focus:
+                  'Core computer systems, software development, and algorithms.',
+              highlight:
+                  'NBA Accredited; offers electives in AI, ML, and Cloud Computing.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '🧠',
               branchName: 'Information Technology (IT)',
               hod: 'Dr. Mrs. Shabana S. Pathan',
-              focus: 'Software systems, databases, and application technologies.',
-              highlight: 'Strong industry linkages with IT firms for internships.',
+              focus:
+                  'Software systems, databases, and application technologies.',
+              highlight:
+                  'Strong industry linkages with IT firms for internships.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '⚙️',
               branchName: 'Mechanical Engineering (ME)',
               hod: 'Dr. Sushant S. Satputaley',
               focus: 'Manufacturing, design, thermodynamics, and automation.',
-              highlight: 'NBA Accredited; well-equipped labs and industrial collaborations.',
+              highlight:
+                  'NBA Accredited; well-equipped labs and industrial collaborations.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '📡',
               branchName: 'Electronics & Telecommunication Engineering (ETC)',
               hod: 'Dr. Harish V. Rajurkar',
-              focus: 'Embedded systems, communication networks, and signal processing.',
+              focus:
+                  'Embedded systems, communication networks, and signal processing.',
               highlight: 'NBA Accredited; specialized IoT and VLSI training.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '🔌',
               branchName: 'Electrical Engineering (EE)',
               hod: 'Dr. Mrs. Jyoti P. Rothe',
-              focus: 'Electrical machines, power systems, and renewable energy.',
+              focus:
+                  'Electrical machines, power systems, and renewable energy.',
               highlight: 'NBA Accredited; emphasis on sustainable technology.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '🏗️',
               branchName: 'Civil Engineering',
               hod: 'Dr. Abhay G. Hirekhan',
               focus: 'Structural, environmental, and geotechnical engineering.',
-              highlight: 'Industry collaboration for real-world construction projects.',
+              highlight:
+                  'Industry collaboration for real-world construction projects.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '🧩',
               branchName: 'CSE – Data Science',
               hod: 'Mr. Abhinav Mule',
-              focus: 'Data analytics, visualization, and AI-based decision systems.',
+              focus:
+                  'Data analytics, visualization, and AI-based decision systems.',
               highlight: 'Modern labs with Python, TensorFlow, and R tools.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '🔐',
               branchName: 'CSE – Cyber Security',
               hod: 'Mrs. Bhakti Thakre',
               focus: 'Network security, cryptography, and ethical hacking.',
               highlight: 'Includes hands-on security simulation workshops.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '🧬',
               branchName: 'CSBS (Computer Science & Business Systems)',
               hod: 'Dr. Pravin H. Sen',
               focus: 'Integration of computing, data, and business processes.',
               highlight: 'Industry partnership with TCS for curriculum design.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '🌐',
               branchName: 'Industrial IoT',
               hod: 'Dr. Shriraghavan R. Madhubushi',
-              focus: 'Smart devices, automation, and connectivity technologies.',
+              focus:
+                  'Smart devices, automation, and connectivity technologies.',
               highlight: 'Practical IoT applications with industrial tools.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '🛠️',
               branchName: 'B.Voc (Vocational Studies)',
               hod: 'Dr. Suresh B. Rangankar',
-              focus: 'Skill-based training and employability-oriented programs.',
+              focus:
+                  'Skill-based training and employability-oriented programs.',
               highlight: 'Includes internships and job-linked modules.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '📘',
               branchName: 'First Year Department',
               hod: 'Dr. Smita C. Tolani',
-              focus: 'Foundation courses in physics, mathematics, and programming.',
-              highlight: 'Dedicated mentorship for smooth transition into engineering.',
+              focus:
+                  'Foundation courses in physics, mathematics, and programming.',
+              highlight:
+                  'Dedicated mentorship for smooth transition into engineering.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '🤖',
               branchName: 'Artificial Intelligence',
               hod: 'Prof. Vikas G. Bhowate',
-              focus: 'AI, ML, neural networks, and natural language processing.',
+              focus:
+                  'AI, ML, neural networks, and natural language processing.',
               highlight: 'Research-driven learning with project exposure.',
             ),
-            const SizedBox(height: 16),
-            const BranchCard(
+            SizedBox(height: 16),
+            BranchCard(
               icon: '🔭',
               branchName: 'Robotics & AI',
               hod: 'Dr. Amit R. Bhende',
-              focus: 'Intelligent robotics, automation, and AI-based control systems.',
+              focus:
+                  'Intelligent robotics, automation, and AI-based control systems.',
               highlight: 'Emerging interdisciplinary program.',
             ),
           ],

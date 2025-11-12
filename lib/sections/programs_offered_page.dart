@@ -9,20 +9,20 @@ class ProgramsOfferedPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Programs Offered'),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: EdgeInsets.only(right: 12),
             child: CollegeLogo(size: 32),
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Undergraduate Programs
-            const ProgramSection(
+            ProgramSection(
               icon: '🎓',
               title: 'Undergraduate (B.Tech) Programs',
               programs: [
@@ -40,10 +40,10 @@ class ProgramsOfferedPage extends StatelessWidget {
                 'Data Science (CSE-DS)',
               ],
             ),
-            const SizedBox(height: 20),
-            
+            SizedBox(height: 20),
+
             // Postgraduate Programs
-            const ProgramSection(
+            ProgramSection(
               icon: '🎯',
               title: 'Postgraduate (M.Tech) Programs',
               programs: [
@@ -55,10 +55,10 @@ class ProgramsOfferedPage extends StatelessWidget {
                 'Industrial Engineering',
               ],
             ),
-            const SizedBox(height: 20),
-            
+            SizedBox(height: 20),
+
             // Vocational / Management Programs
-            const ProgramSection(
+            ProgramSection(
               icon: '💼',
               title: 'Vocational / Management Programs',
               programs: [
@@ -67,10 +67,10 @@ class ProgramsOfferedPage extends StatelessWidget {
                 'MBA (Master of Business Administration)',
               ],
             ),
-            const SizedBox(height: 20),
-            
+            SizedBox(height: 20),
+
             // Ph.D. & Research Programs
-            const ProgramSection(
+            ProgramSection(
               icon: '🔬',
               title: 'Ph.D. & Research Programs',
               programs: [
@@ -78,7 +78,7 @@ class ProgramsOfferedPage extends StatelessWidget {
                 'Research in Engineering and Applied Sciences disciplines',
               ],
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
           ],
         ),
       ),
@@ -91,7 +91,11 @@ class ProgramSection extends StatelessWidget {
   final String title;
   final List<String> programs;
 
-  const ProgramSection({super.key, required this.icon, required this.title, required this.programs});
+  const ProgramSection(
+      {super.key,
+      required this.icon,
+      required this.title,
+      required this.programs});
 
   @override
   Widget build(BuildContext context) {
@@ -132,30 +136,32 @@ class ProgramSection extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: programs.map((program) => Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        '• ',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.blue,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          program,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            color: Colors.grey,
+            children: programs
+                .map((program) => Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            '• ',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.blue,
+                            ),
                           ),
-                        ),
+                          Expanded(
+                            child: Text(
+                              program,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                )).toList(),
+                    ))
+                .toList(),
           ),
         ),
       ],
