@@ -84,7 +84,7 @@ Personalized user experience (Coming Soon)
 
 *Home Dashboard* | *News & Events* | *Academic Calendar*
 :-------------------------:|:-------------------------:|:-------------------------:
-![Home](assets/home1.jpg) | ![News](assets/home2.jpg) | ![Calendar](assets/images/calenderodd.jpg)
+![Home](assets/ss1.jpg) | ![News](assets/ss2.jpg) | ![Calendar](assets/ss3.jpg)
 
 ## 🛠️ Technical Stack
 
